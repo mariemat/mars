@@ -1,6 +1,3 @@
-Title: Resource Mining
-Date: 2024-01-01
-Slug: resource-mining
 
 # Mining Mars: Living Off the Red Planet
 

@@ -1,7 +1,3 @@
-Title: Mars Missions
-Date: 2024-01-01
-Slug: mars-missions
-
 # Mars Missions: Humanity's Quest to Reach the Red Planet
 
 Since the dawn of the Space Age, Mars has captivated humanity's imagination as our next destination beyond Earth. This comprehensive overview chronicles the ambitious missions that have shaped our understanding of the Red Planet and paved the way for human exploration.
@@ -119,18 +115,20 @@ The Artemis lunar program serves as a stepping stone to Mars:
 
 ## Mission Success Statistics
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
-    <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
-        <h3 style="margin: 0; font-size: 2em;">~50%</h3>
-        <p style="margin: 5px 0 0 0;">Overall Mission Success Rate</p>
-    </div>
-    <div style="background: linear-gradient(135deg, #cc2936 0%, #e74c3c 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
-        <h3 style="margin: 0; font-size: 2em;">50+</h3>
-        <p style="margin: 5px 0 0 0;">Total Missions Attempted</p>
-    </div>
-    <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
-        <h3 style="margin: 0; font-size: 2em;">6</h3>
-        <p style="margin: 5px 0 0 0;">Nations with Mars Programs</p>
+<div style="background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
+            <div style="font-size: 2rem; font-weight: 700; color: #cc2936; margin-bottom: 0.5rem;">~50%</div>
+            <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px;">Overall Success Rate</div>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
+            <div style="font-size: 2rem; font-weight: 700; color: #cc2936; margin-bottom: 0.5rem;">50+</div>
+            <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px;">Missions Attempted</div>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
+            <div style="font-size: 2rem; font-weight: 700; color: #cc2936; margin-bottom: 0.5rem;">6</div>
+            <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px;">Nations with Programs</div>
+        </div>
     </div>
 </div>
 

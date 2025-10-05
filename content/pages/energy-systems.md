@@ -1,6 +1,3 @@
-Title: Energy Systems
-Date: 2024-01-01
-Slug: energy-systems
 
 # Powering the Red Planet: Energy on Mars
 

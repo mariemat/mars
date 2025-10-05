@@ -1,6 +1,3 @@
-Title: Space Colonies
-Date: 2024-01-01
-Slug: space-colonies
 
 # Building New Worlds: The Future of Space Colonies
 

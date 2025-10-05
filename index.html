@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mars Launchpad - Exploring Mars and the future of space exploration">
+    <title>Mars Launchpad</title>
+
+    <link rel="stylesheet" href="theme/static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Markdown rendering library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+</head>
+
+<body>
+    <!-- Mars Hero Banner -->
+    <header class="mars-banner" style="background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        url('images/mars-rover-banner.jpg');">
+        <div class="banner-content">
+            <h1 class="site-title">Mars Launchpad</h1>
+            <p class="site-tagline">Your comprehensive guide to Mars exploration, space colonization, and humanity's journey to the Red Planet</p>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <!-- Left Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Explore</h3>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" onclick="loadHome(event)">🏠 Home</a></li>
+                <li><a href="#mars-missions" class="nav-link" onclick="loadPage(event, 'mars-missions')">🚀 Mars Missions</a></li>
+                <li><a href="#mars-rovers" class="nav-link" onclick="loadPage(event, 'mars-rovers')">🤖 Mars Rovers</a></li>
+                <li><a href="#transportation" class="nav-link" onclick="loadPage(event, 'transportation')">🛸 Transportation</a></li>
+                <li><a href="#space-colonies" class="nav-link" onclick="loadPage(event, 'space-colonies')">🏗️ Space Colonies</a></li>
+                <li><a href="#life-support" class="nav-link" onclick="loadPage(event, 'life-support')">💨 Life Support</a></li>
+                <li><a href="#energy-systems" class="nav-link" onclick="loadPage(event, 'energy-systems')">⚡ Energy Systems</a></li>
+                <li><a href="#communication" class="nav-link" onclick="loadPage(event, 'communication')">📡 Communication</a></li>
+                <li><a href="#health-medicine" class="nav-link" onclick="loadPage(event, 'health-medicine')">🏥 Health & Medicine</a></li>
+                <li><a href="#psychology" class="nav-link" onclick="loadPage(event, 'psychology')">🧠 Psychology</a></li>
+                <li><a href="#food-production" class="nav-link" onclick="loadPage(event, 'food-production')">🌱 Food Production</a></li>
+                <li><a href="#resource-mining" class="nav-link" onclick="loadPage(event, 'resource-mining')">⛏️ Resource Mining</a></li>
+                <li><a href="#architecture" class="nav-link" onclick="loadPage(event, 'architecture')">🏛️ Architecture</a></li>
+                <li><a href="#mission-timeline" class="nav-link" onclick="loadPage(event, 'mission-timeline')">📅 Mission Timeline</a></li>
+                <li><a href="#bibliography" class="nav-link" onclick="loadPage(event, 'bibliography')">📚 Bibliography</a></li>
+                <li><a href="#movies" class="nav-link" onclick="loadPage(event, 'movies')">🎬 Movies</a></li>
+            </ul>
+
+            <!-- Footer Links -->
+            <div class="sidebar-footer">
+                <h4>External Links</h4>
+                <ul class="footer-links">
+                    <li><a href="https://mars.nasa.gov/" target="_blank" rel="noopener">NASA Mars Exploration</a></li>
+                    <li><a href="https://www.spacex.com/mars/" target="_blank" rel="noopener">SpaceX Mars Program</a></li>
+                    <li><a href="https://www.marssociety.org/" target="_blank" rel="noopener">Mars Society</a></li>
+                </ul>
+
+                <h4>Follow</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <article id="page-content">
+                <p>Loading...</p>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Mars Launchpad. Exploring the Red Planet.</p>
+        <p class="generation-time">Page loaded: <span id="generation-time"></span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -95,3 +95,47 @@ Core dependencies in requirements.txt:
 - pelican[markdown]>=4.8.0
 - markdown>=3.4.0
 - typogrify>=2.0.7
+
+## Research Methodology
+
+**Amazon ASIN Verification**: Each Amazon Standard Identification Number (ASIN) has been researched to ensure direct links to the correct book editions. ASINs are Amazon's unique product identifiers that provide reliable linking.
+
+**ISBN Cross-Reference**: All ISBN-13 numbers have been verified against multiple book databases to ensure accuracy.
+
+**Link Reliability**: All Amazon links use the format `amazon.com/dp/[ASIN]` which provides the most stable linking method.
+
+## Content Styling System
+
+This site uses a custom content styling system for creating rich, styled content blocks without writing HTML. See `CONTENT-STYLES.md` for complete documentation.
+
+### Available Custom Blocks
+
+The site supports special code block syntax for creating styled content:
+
+- **`stats`** - Statistics display cards (e.g., Quick Mars Facts)
+- **`movie`** - Movie information cards with poster and details
+- **`book`** - Book information cards with cover and bibliographic data
+- **`rover`** - Mars rover/mission information cards
+
+### Usage Example
+
+Instead of writing HTML in markdown:
+````markdown
+```book
+title: The Martian
+author: Andy Weir
+year: February 2014
+isbn: 978-0-553-41802-6
+asin: B00EMXBDMA
+amazon: https://www.amazon.com/dp/B00EMXBDMA
+description: The survival thriller that became a cultural phenomenon.
+```
+````
+
+This automatically generates properly styled HTML cards matching the site's design system.
+
+### Implementation Location
+
+- Parser logic: `app.js` - Custom renderer for marked.js
+- Styles: Inline styles in generated HTML matching `theme/static/css/main.css`
+- Documentation: `CONTENT-STYLES.md` - Complete syntax reference and examples

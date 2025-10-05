@@ -1,6 +1,3 @@
-Title: Transportation
-Date: 2024-01-01
-Slug: transportation
 
 # Getting to Mars: The Ultimate Road Trip
 

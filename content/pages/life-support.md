@@ -1,6 +1,3 @@
-Title: Life Support
-Date: 2024-01-01
-Slug: life-support
 
 # Breathing Borrowed Time: Life Support on Mars
 

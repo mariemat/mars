@@ -1,6 +1,3 @@
-Title: Architecture
-Date: 2024-01-01
-Slug: architecture
 
 # Space Architecture: Designing for the Final Frontier
 

@@ -1,6 +1,3 @@
-Title: Psychology
-Date: 2024-01-01
-Slug: psychology
 
 # Space Psychology: The Human Mind Beyond Earth
 

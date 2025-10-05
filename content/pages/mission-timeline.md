@@ -1,6 +1,3 @@
-Title: Mission Timeline
-Date: 2024-01-01
-Slug: mission-timeline
 
 # When Will We Get to Mars? The Critical Timeline
 

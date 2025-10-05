@@ -1,6 +1,3 @@
-Title: Food Production
-Date: 2024-01-01
-Slug: food-production
 
 # Food Production in Space: Feeding the Final Frontier
 

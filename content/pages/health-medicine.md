@@ -1,6 +1,3 @@
-Title: Health & Medicine
-Date: 2024-01-01
-Slug: health-medicine
 
 # Keeping Humans Healthy on an Alien World
 
