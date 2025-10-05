@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{{ SITENAME }} - Exploring Mars and the future of space exploration{% endblock description %}">
+
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+
+    <link rel="icon" href="{{ SITEURL }}/favicon.ico">
+</head>
+
+<body>
+    <!-- Mars Hero Banner -->
+    <header class="mars-banner"{% if BANNER_IMAGE %} style="background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        url('{{ SITEURL }}/{{ BANNER_IMAGE }}');"{% endif %}>
+        <div class="banner-content">
+            <h1 class="site-title">{{ BANNER_TITLE or SITENAME }}</h1>
+            <p class="site-tagline">{{ BANNER_SUBTITLE or "Your comprehensive guide to Mars exploration, space colonization, and humanity's journey to the Red Planet" }}</p>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <!-- Left Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Explore</h3>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ SITEURL }}/" class="nav-link {% if page and page.slug == 'index' %}active{% elif not page and not article %}active{% endif %}">
+                    🏠 Home
+                </a></li>
+                {% for title, link in MENUITEMS %}
+                    {% set slug = link.strip('/').split('/')[-1] %}
+                    <li><a href="{{ SITEURL }}{{ link }}" class="nav-link {% if page and page.slug == slug %}active{% endif %}">
+                        {{ title }}
+                    </a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="sidebar-footer">
+                <h4>Quick Links</h4>
+                <ul class="quick-links">
+                    {% for name, link in LINKS %}
+                        <li><a href="{{ link }}" target="_blank" rel="noopener">{{ name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 {{ SITENAME }}. Ready for the Red Planet!</p>
+            <p style="font-size: 0.875rem; font-style: italic; color: #666; margin-top: 0.5rem;">
+                {{ GENERATION_TIME }}
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+</body>
+</html>

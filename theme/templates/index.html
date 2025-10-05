@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Exploring Mars and Beyond{% endblock %}
+
+{% block content %}
+<div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 3rem; margin: 0 -3rem 3rem -3rem; border-radius: 12px; text-align: center;">
+    <h2 style="color: #1a1a2e; margin-bottom: 1rem;">Why Mars Matters</h2>
+    <p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+        Mars represents more than scientific curiosity—it's humanity's backup plan, our next evolutionary step, and the testing ground for technologies that will take us to the stars. Understanding Mars and learning to live there teaches us about Earth, about ourselves, and about what it means to be human in the cosmos.
+    </p>
+</div>
+
+{% if articles %}
+<div style="margin-top: 3rem;">
+    <h2 style="color: #1a1a2e; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Latest Updates</h2>
+    <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        {% for article in articles[:3] %}
+            <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 3px solid #ff6b35;">
+                <h3 style="color: #1a1a2e; margin-bottom: 0.75rem; font-size: 1.2rem;">
+                    <a href="{{ SITEURL }}/{{ article.url }}" style="color: #1a1a2e; text-decoration: none;">{{ article.title }}</a>
+                </h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">{{ article.summary|striptags|truncate(120) }}</p>
+                <span style="color: #999; font-size: 0.85rem;">{{ article.locale_date }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}
