@@ -466,6 +466,8 @@ body {
     gap: 5px;
     box-shadow: 0 4px 12px rgba(204, 41, 54, 0.4);
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    pointer-events: auto;
 }
 
 .mobile-menu-toggle:active {
@@ -479,6 +481,7 @@ body {
     border-radius: 2px;
     transition: all 0.3s ease;
     display: block;
+    pointer-events: none;
 }
 
 /* Hamburger animation to X */

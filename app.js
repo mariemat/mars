@@ -247,8 +247,11 @@ function setupMobileMenu() {
         return;
     }
 
+    console.log('Mobile menu initialized');
+
     // Function to close menu
     const closeMenu = () => {
+        console.log('Closing menu');
         sidebar.classList.remove('active');
         menuToggle.classList.remove('active');
         overlay.classList.remove('active');
@@ -257,30 +260,38 @@ function setupMobileMenu() {
 
     // Function to open menu
     const openMenu = () => {
+        console.log('Opening menu');
         sidebar.classList.add('active');
         menuToggle.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     };
 
-    // Toggle menu when hamburger is clicked (support both click and touch)
-    menuToggle.addEventListener('click', (e) => {
+    // Function to toggle menu
+    const toggleMenu = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        console.log('Menu toggle clicked/touched');
 
         if (sidebar.classList.contains('active')) {
             closeMenu();
         } else {
             openMenu();
         }
-    });
+    };
 
-    // Also add touchstart for better iOS support
-    menuToggle.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-    }, { passive: false });
+    // Use touchend instead of click for better iOS support
+    menuToggle.addEventListener('touchend', toggleMenu, { passive: false });
+
+    // Also add click for non-touch devices
+    menuToggle.addEventListener('click', toggleMenu);
 
     // Close menu when clicking overlay
+    overlay.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        closeMenu();
+    }, { passive: false });
+
     overlay.addEventListener('click', (e) => {
         e.preventDefault();
         closeMenu();
