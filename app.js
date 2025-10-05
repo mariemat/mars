@@ -242,32 +242,64 @@ function setupMobileMenu() {
     const overlay = document.getElementById('mobile-overlay');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (!menuToggle || !sidebar || !overlay) return;
+    if (!menuToggle || !sidebar || !overlay) {
+        console.error('Mobile menu elements not found');
+        return;
+    }
 
-    // Toggle menu when hamburger is clicked
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        sidebar.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        overlay.classList.toggle('active');
-    });
-
-    // Close menu when clicking overlay
-    overlay.addEventListener('click', () => {
+    // Function to close menu
+    const closeMenu = () => {
         sidebar.classList.remove('active');
         menuToggle.classList.remove('active');
         overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    // Function to open menu
+    const openMenu = () => {
+        sidebar.classList.add('active');
+        menuToggle.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    // Toggle menu when hamburger is clicked (support both click and touch)
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (sidebar.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Also add touchstart for better iOS support
+    menuToggle.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+    }, { passive: false });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeMenu();
     });
 
     // Close menu when clicking a nav link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                sidebar.classList.remove('active');
-                menuToggle.classList.remove('active');
-                overlay.classList.remove('active');
+                closeMenu();
             }
         });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+            closeMenu();
+        }
     });
 }
 
