@@ -2,7 +2,7 @@
 ## About This Site
 
 This comprehensive resource covers all aspects of Mars exploration and space colonization, from current robotic missions to future human settlements.
-Choose any topic from the left sidebar to begin your exploration. Each section provides detailed information about different aspects of Mars exploration and space colonization.
+Choose any topic from the left sidebar to begin your exploration. Each section provides detailed information about different aspects of Mars exploration and space colonization. This project is directed by Marion, a student in France.
 
 <div style="background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
     <h3 style="color: #1a1a2e; font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 3px solid #cc2936; padding-bottom: 0.5rem;">Quick Mars Facts</h3>
