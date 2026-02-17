@@ -1,5 +1,5 @@
 
-## Welcome on this launchpad !
+## Welcome to this launchpad !
 
 3...2...1...and liftoff ! Welcome to my space of discoveries ! Lets learn together how astronauts and scientists from around the world prepare to space missions and exploration. I assembled for you several sources on the topic, movies and books recommendations as well as articles that summarize my most interesting discoveries. Have fun looking around !
 
