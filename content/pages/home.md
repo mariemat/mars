@@ -1,8 +1,9 @@
 
-## About This Site
+## Welcome on this launchpad !
 
-This comprehensive resource covers all aspects of Mars exploration and space colonization, from current robotic missions to future human settlements.
-Choose any topic from the left sidebar to begin your exploration. Each section provides detailed information about different aspects of Mars exploration and space colonization. This project is directed by Marion, a student in France.
+3...2...1...and liftoff ! Welcome to my space of discoveries ! Lets learn together how astronauts and scientists from around the world prepare to space missions and exploration. I assembled for you several sources on the topic, movies and books recommendations as well as articles that summarize my most interesting discoveries. Have fun looking around !
+
+This project is directed by Marion, a student in France. If you are interested in exchanging with me about certain topics, feel welcome to leave me a comment.
 
 <div style="background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
     <h3 style="color: #1a1a2e; font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 3px solid #cc2936; padding-bottom: 0.5rem;">Quick Mars Facts</h3>
