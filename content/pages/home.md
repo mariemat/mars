@@ -26,3 +26,6 @@ This project is directed by Marion, a student in France. If you are interested i
         </div>
     </div>
 </div>
+
+
+![Mars](images/MarsLandingSites.jpg)
