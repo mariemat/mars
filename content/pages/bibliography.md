@@ -115,9 +115,9 @@ author: Cyprien Verseux
 year: Spetember 2017
 isbn: 978-2749932590
 asin: 
-amazon:[ https://www.amazon.com/Life-Mars-What-Know-Before/dp/0691209251/ref=tmm_pap_swatch_0](https://www.amazon.fr/Vivre-sur-Mars-Cyprien-Verseux/dp/2749932599)
-cover: https://images-na.ssl-images-amazon.com/images/P/0691209251.01._SCLZZZZZZZ_SX500_.jpg
-description: Examines the scientific evidence for past or present life on Mars, addressing contamination concerns and the ethics of Mars exploration.
+amazon:(https://www.amazon.fr/Vivre-sur-Mars-Cyprien-Verseux/dp/2749932599)
+cover:(https://m.media-amazon.com/images/I/614oBpRTbKL._SL1268_.jpg)
+description: A complete description of the HI-SEAS mission IV, by a crew member; Cyprien VERSEUX.
 ```
 
 ```book
