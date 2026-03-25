@@ -2,6 +2,15 @@
 
 Since the dawn of the Space Age, Mars has captivated humanity's imagination as our next destination beyond Earth. This comprehensive overview chronicles the ambitious missions that have shaped our understanding of the Red Planet and paved the way for human exploration.
 
+## Analog Missions
+Before launching a mission, every aspect of it has to be planned, rehearsed and tried out in a situation as close to reality as possible. And preparing a mission to Mars isn't easy. To prepare, there are several factors to take into account. How to select the team that will go ? How can they stay in good shape physically and mentally ?  How can we provide them the necessary resources, and more in case of a problem ? How to assure easy communication with Earth and face the delays created by the distance between Mars and Earth ?
+
+### HI-SEAS
+To understand these problems and try to find solutions, the Hawai‘i Space Exploration Analog and Simulation (HI-SEAS) was launched in 2013. Located approximately 8,200 feet above sea level, the HI-SEAS habitat is a 1,200 square foot dome located on a Mars-like site on the Mauna Loa volcano on Hawai‘i Island. HI-SEAS has been the home to five successful long-duration (4 to 12 months). The desertic landscape and merely total isolation from society reunite conditions similar to those of Mars. To add on, the crew is not allowed to get out of the dome freely, and has to wear a spacesuit such as for any EVA (extra-vehicular activity). 
+The effect of confinement and forced proximity is closely studied by researchers. For example, in Vivre sur Mars, by Cyprien VERSEUX, a crew member of HI SEAS IV mission, the level of stress is measured through hair. Its level of cortisol is a non-invasive way to observe the stress of the group months after months. In its book, C.VERSEUX describes how tensions may rise by the differences of personality and the behaviour of each crewmate.
+
+### Concordia
+
 ## Historical Mars Missions
 
 ### Early Soviet Attempts (1960s-1970s)
