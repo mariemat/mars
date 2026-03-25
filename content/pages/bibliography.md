@@ -110,6 +110,17 @@ description: Chronicles four centuries of Mars observation, from Galileo's first
 ### Astrobiology and the Search for Life
 
 ```book
+title: Vivre sur Mars
+author: Cyprien Verseux
+year: Spetember 2017
+isbn: 978-2749932590
+asin: 
+amazon:[ https://www.amazon.com/Life-Mars-What-Know-Before/dp/0691209251/ref=tmm_pap_swatch_0](https://www.amazon.fr/Vivre-sur-Mars-Cyprien-Verseux/dp/2749932599)
+cover: https://images-na.ssl-images-amazon.com/images/P/0691209251.01._SCLZZZZZZZ_SX500_.jpg
+description: Examines the scientific evidence for past or present life on Mars, addressing contamination concerns and the ethics of Mars exploration.
+```
+
+```book
 title: Life on Mars: What to Know Before We Go
 author: David A. Weintraub
 year: March 2018
