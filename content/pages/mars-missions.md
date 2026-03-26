@@ -7,7 +7,7 @@ Before launching a mission, every aspect of it has to be planned, rehearsed and 
 
 ### HI-SEAS
 To understand these problems and try to find solutions, the Hawai‘i Space Exploration Analog and Simulation (HI-SEAS) was launched in 2013. Located approximately 8,200 feet above sea level, the HI-SEAS habitat is a 1,200 square foot dome located on a Mars-like site on the Mauna Loa volcano on Hawai‘i Island. HI-SEAS has been the home to five successful long-duration (4 to 12 months) missions. The desertic landscape and merely total isolation from society reunite conditions similar to those of Mars. To add on, the crew is not allowed to get out of the dome freely, and has to wear a spacesuit such as for any EVA (extra-vehicular activity). 
-The effect of confinement and forced proximity is closely studied by researchers. For example, in Vivre sur Mars, by Cyprien VERSEUX, a crew member of HI SEAS IV mission, the level of stress is measured through hair. Its level of cortisol is a non-invasive way to observe the stress of the group months after months. In its book, C.VERSEUX describes how tensions may rise by the differences of personality and the behaviour of each crewmate.
+The effect of confinement and forced proximity of the crew is closely studied by researchers. For example, in Vivre sur Mars, by Cyprien VERSEUX, a crew member of HI SEAS IV mission, the level of stress is measured through hair samples. Its level of cortisol is a non-invasive way to observe the stress of the group months after months. In its book, C.VERSEUX describes how tensions may rise by the differences of personality and the behaviour of each crewmate.
 
 ### Concordia
 
