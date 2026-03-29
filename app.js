@@ -503,6 +503,9 @@ async function loadPageBySlug(slug) {
         // Initialize galleries after content is loaded
         initializeGalleries();
 
+        // Initialize lightbox for all images
+        initializeLightbox();
+
         // Update active nav link
         setActiveNavLink(slug);
 
@@ -544,6 +547,62 @@ window.addEventListener('hashchange', () => {
         loadHome();
     }
 });
+
+// Image Lightbox functionality
+function initializeLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const closeBtn = document.querySelector('.image-lightbox-close');
+
+    if (!lightbox || !lightboxImg) {
+        console.warn('Lightbox elements not found');
+        return;
+    }
+
+    // Find all images in the content area (excluding navigation/header images)
+    const contentImages = document.querySelectorAll('#page-content img');
+
+    contentImages.forEach(img => {
+        // Make image clickable
+        img.style.cursor = 'pointer';
+
+        // Add click handler
+        img.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event from bubbling to lightbox
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || 'Full size image';
+            lightbox.classList.add('active');
+        });
+    });
+
+    // Close lightbox when clicking on the background
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    // Close lightbox when clicking the X button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+        });
+    }
+
+    // Close lightbox when clicking on the image itself
+    lightboxImg.addEventListener('click', (e) => {
+        e.stopPropagation();
+        lightbox.classList.remove('active');
+    });
+
+    // Close lightbox on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+        }
+    });
+}
 
 // Gallery navigation functions
 // Store auto-advance timers for each gallery

@@ -16,7 +16,7 @@ site: Jezero Crater
 coordinates: 18.4447°N, 77.4508°E
 mission: NASA Mars 2020
 duration: 1000+ sols (Martian days) and counting
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/PIA23764-MarsPerseveranceRover-ArtistConcept-20200305.jpg/640px-PIA23764-MarsPerseveranceRover-ArtistConcept-20200305.jpg
+image: images/MarsPerseveranceRover-ArtistConcept.jpg
 link: https://mars.nasa.gov/mars2020/
 link_text: Mars 2020 Mission
 description: The most advanced Mars rover ever built, equipped with a helicopter companion (Ingenuity) and designed to search for signs of ancient microbial life while collecting samples for future return to Earth.
@@ -31,7 +31,7 @@ site: Gale Crater
 coordinates: 4.5895°S, 137.4417°E
 mission: NASA Mars Science Laboratory (MSL)
 duration: 4000+ sols and counting
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera.jpg/640px-PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera.jpg
+image: images/Curiosity_Self-Portrait_at_Big_Sky_Drilling_Site.jpg
 link: https://mars.nasa.gov/msl/
 link_text: Mars Science Laboratory
 description: Nuclear-powered rover the size of a car, designed to assess Mars' past habitability. Famous for its "seven minutes of terror" sky crane landing and groundbreaking discoveries about ancient water on Mars.
@@ -46,7 +46,7 @@ site: Utopia Planitia
 coordinates: 25.066°N, 109.925°E
 mission: CNSA Tianwen-1
 duration: 350+ sols (planned 90 sols)
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Zhurong_rover_3x2_crop.png/640px-Zhurong_rover_3x2_crop.png
+image: images/Zhurong_rover.png
 link: https://www.cnsa.gov.cn/english/
 link_text: CNSA Official
 description: China's first successful Mars rover, named after the Chinese god of fire. Equipped with six scientific instruments to study Martian topography, geology, and atmosphere.
@@ -65,7 +65,7 @@ site: Meridiani Planum
 coordinates: 1.9462°S, 354.4734°E
 mission: NASA Mars Exploration Rover B
 duration: 5,352 sols (planned 90 sols)
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Opportunity_PIA03240.jpg/640px-Opportunity_PIA03240.jpg
+image: images/Opportunity.jpg
 link: https://mars.nasa.gov/mer/
 link_text: Mars Exploration Rovers
 description: The marathon rover that operated for nearly 15 years, far exceeding its planned 90-day mission. Lost during a global dust storm in 2018 after traveling 45.16 km on Mars.
@@ -80,7 +80,7 @@ site: Gusev Crater
 coordinates: 14.5684°S, 175.4726°E
 mission: NASA Mars Exploration Rover A
 duration: 2,208 sols (planned 90 sols)
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mars_Spirit.jpg/640px-Mars_Spirit.jpg
+image: images/Mars_Spirit.jpeg
 link: https://mars.nasa.gov/mer/
 link_text: Mars Exploration Rovers
 description: Twin rover to Opportunity, Spirit studied Martian rocks and soils for over 6 years. Got stuck in soft sand in 2009 and ceased communications in 2010 after surviving multiple Martian winters.
@@ -95,7 +95,7 @@ site: Ares Vallis
 coordinates: 22.482°N, 33.22°W
 mission: NASA Mars Pathfinder
 duration: 85 sols (planned 7-30 sols)
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sojourner_on_Mars_PIA01122.jpg/640px-Sojourner_on_Mars_PIA01122.jpg
+image: images/Sojourner.jpg
 link: https://mars.nasa.gov/mars-exploration/missions/pathfinder/
 link_text: Mars Pathfinder
 description: The first successful Mars rover, about the size of a microwave oven. Proved that low-cost missions to Mars were possible and paved the way for all future rover missions.
@@ -113,7 +113,7 @@ status: Active
 site: Travels with Perseverance in Jezero Crater
 mission: NASA Mars 2020 Technology Demonstration
 duration: 70+ flights (planned 5 flights)
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/NASA%27s_Ingenuity_helicopter_on_Mars_by_Perseverance_Mastcam-Z%2C_Sol_768_%2853475637956%29.jpg/640px-NASA%27s_Ingenuity_helicopter_on_Mars_by_Perseverance_Mastcam-Z%2C_Sol_768_%2853475637956%29.jpg
+image: images/Ingenuity.webp
 link: https://mars.nasa.gov/technology/helicopter/
 link_text: Ingenuity Helicopter
 description: The first aircraft to achieve powered flight on another planet. Originally a technology demonstration, Ingenuity has far exceeded expectations and now serves as a scout for Perseverance.
@@ -147,7 +147,7 @@ status: Future Mission
 site: Oxia Planum
 mission: ESA ExoMars Programme
 duration: Planned 7+ months
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ExoMars_prototype_rover_3.jpg/640px-ExoMars_prototype_rover_3.jpg
+image: images/ExoMars.jpg
 link: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars
 link_text: ExoMars Programme
 description: European Space Agency rover designed to drill up to 2 meters below the Martian surface to search for biosignatures and signs of past or present life. Named after DNA pioneer Rosalind Franklin.
@@ -161,7 +161,7 @@ status: Future Mission
 site: Jezero Crater vicinity
 mission: Joint NASA/ESA
 duration: Multi-phase campaign
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mars_sample_returnjpl.jpg/640px-Mars_sample_returnjpl.jpg
+image: images/Mars_Samples_retrieval_lander.jpg
 link: https://mars.nasa.gov/msr/
 link_text: Mars Sample Return
 description: Ambitious joint NASA/ESA mission to retrieve samples collected by Perseverance rover, involving multiple spacecraft, rovers, and aircraft working together for the first Mars sample return to Earth.
