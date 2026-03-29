@@ -7,6 +7,10 @@
     <title>Mars Launchpad</title>
 
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -86,6 +90,12 @@
         <p>&copy; <span id="current-year"></span> Mars Launchpad. Exploring the Red Planet.</p>
         <p class="generation-time">Page loaded: <span id="generation-time"></span></p>
     </footer>
+
+    <!-- Image Lightbox -->
+    <div id="image-lightbox" class="image-lightbox">
+        <span class="image-lightbox-close">&times;</span>
+        <img id="lightbox-image" src="" alt="Full size image">
+    </div>
 
     <script src="app.js"></script>
 </body>

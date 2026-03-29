@@ -133,7 +133,6 @@ function renderBookBlock(content) {
     if (data.author) html += `<strong>Author:</strong> ${data.author}<br>`;
     if (data.year) html += `<strong>Publication Date:</strong> ${data.year}<br>`;
     if (data.isbn) html += `<strong>ISBN-13:</strong> ${data.isbn}<br>`;
-    if (data.asin) html += `<strong>Amazon ASIN:</strong> ${data.asin}<br>`;
     if (amazonLink) html += `<strong>Amazon Link:</strong> <a href="${amazonLink}" target="_blank">View on Amazon</a>`;
     html += '</p>';
 
