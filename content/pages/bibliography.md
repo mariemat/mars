@@ -112,11 +112,11 @@ description: Chronicles four centuries of Mars observation, from Galileo's first
 ```book
 title: Vivre sur Mars
 author: Cyprien Verseux
-year: Spetember 2017
-isbn: 978-2749932590
-asin: 
-amazon:(https://www.amazon.fr/Vivre-sur-Mars-Cyprien-Verseux/dp/2749932599)
-cover:(https://m.media-amazon.com/images/I/614oBpRTbKL._SL1268_.jpg)
+year: September 2017
+isbn: 978-2-7499-3259-0
+asin: 2749932599
+amazon: https://www.amazon.fr/Vivre-sur-Mars-Cyprien-Verseux/dp/2749932599
+cover: https://m.media-amazon.com/images/I/614oBpRTbKL._SL1268_.jpg
 description: A complete description of the HI-SEAS mission IV, by a crew member; Cyprien VERSEUX.
 ```
 
