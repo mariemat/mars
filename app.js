@@ -12,6 +12,8 @@ renderer.code = function(code, language) {
         return renderBookBlock(code);
     } else if (language === 'rover') {
         return renderRoverBlock(code);
+    } else if (language === 'gallery') {
+        return renderGalleryBlock(code);
     }
 
     // Fall back to default code rendering
@@ -220,6 +222,95 @@ function renderRoverBlock(content) {
     return html;
 }
 
+// Helper function to escape HTML
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Render gallery block
+function renderGalleryBlock(content) {
+    // Extract all image and description pairs from bullet list format
+    // Format: * imagePath: description
+    const images = [];
+    const descriptions = [];
+
+    const lines = content.trim().split('\n');
+    lines.forEach((line, index) => {
+        line = line.trim();
+
+        // Skip empty lines
+        if (!line) return;
+
+        // Remove leading bullet (* or -)
+        if (line.startsWith('*') || line.startsWith('-')) {
+            line = line.substring(1).trim();
+        }
+
+        // Split on first colon to get imagePath: description
+        const colonIndex = line.indexOf(':');
+        if (colonIndex > -1) {
+            const imagePath = line.substring(0, colonIndex).trim();
+            const description = line.substring(colonIndex + 1).trim();
+
+            if (!imagePath) {
+                console.warn(`Gallery: Line ${index + 1} has no image path`);
+                return;
+            }
+
+            if (!description) {
+                console.warn(`Gallery: Image "${imagePath}" is missing a description`);
+                descriptions.push('Image description not provided');
+            } else {
+                descriptions.push(description);
+            }
+
+            images.push(imagePath);
+        }
+    });
+
+    // Handle edge case: no images
+    if (images.length === 0) {
+        return `<div style="background: #fff3cd; border: 2px solid #ff6b35; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; color: #856404;">
+            <strong>⚠️ Gallery Error:</strong> No images found. Please add at least one image using the format: <code>* path/to/image.jpg: Your description</code>
+        </div>`;
+    }
+
+    // Generate unique gallery ID
+    const galleryId = 'gallery-' + Math.random().toString(36).substr(2, 9);
+
+    // Determine if single image (for button disabling)
+    const isSingleImage = images.length === 1;
+
+    // Build HTML with CSS classes (encode JSON to safely store in attributes)
+    const encodedImages = encodeURIComponent(JSON.stringify(images));
+    const encodedDescriptions = encodeURIComponent(JSON.stringify(descriptions));
+
+    let html = `<div class="mars-gallery" data-gallery-id="${galleryId}" data-current-index="0" data-images="${encodedImages}" data-descriptions="${encodedDescriptions}" data-auto-advance="true">`;
+
+    // Image wrapper with overlaid controls
+    html += `<div class="gallery-image-wrapper">`;
+    // Escape description for HTML attribute
+    const escapedAlt = escapeHtml(descriptions[0]);
+    html += `<img class="gallery-current-image" src="${images[0]}" alt="${escapedAlt}" onerror="this.style.background='#ddd'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🖼️<br>Image failed to load'; this.style.color='#666'; this.style.fontSize='14px'; this.style.textAlign='center'; this.style.padding='2rem';">`;
+
+    // Navigation controls overlaid on image
+    html += `<div class="gallery-controls">`;
+    html += `<button class="gallery-prev" onclick="navigateGallery('${galleryId}', -1, true)" ${isSingleImage ? 'disabled' : ''} aria-label="Previous image">‹</button>`;
+    html += `<button class="gallery-next" onclick="navigateGallery('${galleryId}', 1, true)" ${isSingleImage ? 'disabled' : ''} aria-label="Next image">›</button>`;
+    html += `</div>`;
+
+    html += `</div>`;
+
+    // Description below image
+    html += `<div class="gallery-description">${escapeHtml(descriptions[0])}</div>`;
+
+    html += `</div>`;
+
+    return html;
+}
+
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     updateFooterTime();
@@ -379,6 +470,12 @@ async function loadPage(event, slug) {
 async function loadPageBySlug(slug) {
     const contentDiv = document.getElementById('page-content');
 
+    // Clean up any existing gallery timers before loading new page
+    galleryTimers.forEach((timer, galleryId) => {
+        clearInterval(timer);
+    });
+    galleryTimers.clear();
+
     // Show loading state
     contentDiv.innerHTML = '<p>Loading...</p>';
 
@@ -402,6 +499,9 @@ async function loadPageBySlug(slug) {
 
         // Update content
         contentDiv.innerHTML = html;
+
+        // Initialize galleries after content is loaded
+        initializeGalleries();
 
         // Update active nav link
         setActiveNavLink(slug);
@@ -444,3 +544,105 @@ window.addEventListener('hashchange', () => {
         loadHome();
     }
 });
+
+// Gallery navigation functions
+// Store auto-advance timers for each gallery
+const galleryTimers = new Map();
+
+function initializeGalleries() {
+    const galleries = document.querySelectorAll('.mars-gallery');
+    galleries.forEach(gallery => {
+        // Initial state is already set in data attributes by renderGalleryBlock
+        const images = JSON.parse(decodeURIComponent(gallery.dataset.images || '[]'));
+        if (images.length === 0) {
+            console.warn('Gallery found with no images');
+            return;
+        }
+
+        // Start auto-advance if enabled and more than 1 image
+        if (images.length > 1 && gallery.dataset.autoAdvance === 'true') {
+            startAutoAdvance(gallery);
+        }
+    });
+}
+
+function startAutoAdvance(gallery) {
+    const galleryId = gallery.dataset.galleryId;
+
+    // Clear existing timer if any
+    if (galleryTimers.has(galleryId)) {
+        clearInterval(galleryTimers.get(galleryId));
+    }
+
+    // Set up new timer for 30 seconds
+    const timer = setInterval(() => {
+        // Only advance if auto-advance is still enabled
+        if (gallery.dataset.autoAdvance === 'true') {
+            navigateGallery(galleryId, 1, false);
+        }
+    }, 30000); // 30 seconds
+
+    galleryTimers.set(galleryId, timer);
+}
+
+function stopAutoAdvance(gallery) {
+    const galleryId = gallery.dataset.galleryId;
+
+    // Mark as disabled
+    gallery.dataset.autoAdvance = 'false';
+
+    // Clear timer
+    if (galleryTimers.has(galleryId)) {
+        clearInterval(galleryTimers.get(galleryId));
+        galleryTimers.delete(galleryId);
+    }
+}
+
+function navigateGallery(galleryId, direction, userInitiated = false) {
+    // Find the gallery element
+    const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
+    if (!gallery) {
+        console.error(`Gallery not found: ${galleryId}`);
+        return;
+    }
+
+    // If user clicked, stop auto-advance
+    if (userInitiated) {
+        stopAutoAdvance(gallery);
+    }
+
+    // Get gallery data (decode from URL encoding)
+    const images = JSON.parse(decodeURIComponent(gallery.dataset.images));
+    const descriptions = JSON.parse(decodeURIComponent(gallery.dataset.descriptions));
+    const currentIndex = parseInt(gallery.dataset.currentIndex);
+    const totalImages = images.length;
+
+    // Calculate new index with wraparound
+    let newIndex = currentIndex + direction;
+    if (newIndex < 0) {
+        newIndex = totalImages - 1; // Wrap to last image
+    } else if (newIndex >= totalImages) {
+        newIndex = 0; // Wrap to first image
+    }
+
+    // Update display
+    updateGalleryDisplay(gallery, newIndex, images, descriptions);
+}
+
+function updateGalleryDisplay(gallery, newIndex, images, descriptions) {
+    // Update current index in data attribute
+    gallery.dataset.currentIndex = newIndex;
+
+    // Update image
+    const imgElement = gallery.querySelector('.gallery-current-image');
+    if (imgElement) {
+        imgElement.src = images[newIndex];
+        imgElement.alt = descriptions[newIndex];
+    }
+
+    // Update description (use textContent to safely display text)
+    const descElement = gallery.querySelector('.gallery-description');
+    if (descElement) {
+        descElement.textContent = descriptions[newIndex];
+    }
+}

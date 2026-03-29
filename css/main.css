@@ -631,3 +631,136 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Gallery Styles */
+.mars-gallery {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #cc2936;
+}
+
+.gallery-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-height: 200px;
+}
+
+.gallery-current-image {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    pointer-events: none;
+}
+
+.gallery-prev,
+.gallery-next {
+    background: linear-gradient(135deg, rgba(204, 41, 54, 0.9), rgba(255, 107, 53, 0.9));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(204, 41, 54, 0.5);
+    pointer-events: all;
+    opacity: 0.7;
+}
+
+.gallery-prev:hover:not(:disabled),
+.gallery-next:hover:not(:disabled) {
+    transform: scale(1.1);
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(204, 41, 54, 1), rgba(255, 107, 53, 1));
+}
+
+.gallery-prev:active:not(:disabled),
+.gallery-next:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.gallery-prev:disabled,
+.gallery-next:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.gallery-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #ff6b35;
+}
+
+/* Gallery responsive styles */
+@media (max-width: 768px) {
+    .mars-gallery {
+        padding: 1.5rem;
+    }
+
+    .gallery-current-image {
+        max-height: 400px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .gallery-controls {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mars-gallery {
+        padding: 1rem;
+    }
+
+    .gallery-current-image {
+        max-height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+
+    .gallery-description {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}

@@ -28,4 +28,7 @@ This project is directed by Marion, a student in France. If you are interested i
 </div>
 
 
-![Mars](images/MarsLandingSites.jpg)
+```gallery
+* images/MarsLandingSites.jpg: Map showing all successful Mars landing sites from Viking 1 (1976) to Perseverance (2021), highlighting the concentration of missions in the northern lowlands and equatorial regions
+* images/curiosity-marker-band-valley.jpg: This composite panoramic image, shot by NASA's Curiosity Mars rover on April 8, 2023, shows the "Marker Band Valley" colorized and at different times of day
+```
