@@ -32,7 +32,6 @@ This project is directed by Marion, a student in France. If you are interested i
 * images/Mars.webp: Image of Mars, the Red Planet
 * images/MarsLandingSites.jpg: Map showing all successful Mars landing sites from Viking 1 (1976) to Perseverance (2021), highlighting the concentration of missions in the northern lowlands and equatorial regions
 * images/curiosity-marker-band-valley.jpg: This composite panoramic image, shot by NASA's Curiosity Mars rover on April 8, 2023, shows the "Marker Band Valley" colorized and at different times of day
-* images/mars-landscape.jpg: Image of the landscape of MArs taken by ...
 * images/HI-SEAS.webp: The habitat dome of the HI-SEAS missions, on the Mauna Loa volcano, in Hawaii.
 * images/Concordia.jpg: Concordia base, situated in Antartica. The station is plunged into darkness during 4 months every year.
 ```
