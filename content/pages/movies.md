@@ -26,7 +26,7 @@ director: Phil Lord and Christopher Miller
 starring: Ryan Gosling, Sandra Hüller, James Ortiz
 rating: 8.4
 imdb: https://www.imdb.com/title/tt12042730/
-poster: 
+poster: https://cinemanerdz.com/wp-content/uploads/2026/02/Project-Hail-Mary-Poster-2.jpg
 description: Based on Andy Weir's second novel, this recent masterpiece depicts Doctor Ryland Grace, a teacher forced into the study of an anomaly decimating the sun and threatening the survival of humans on earth.
 ```
 
