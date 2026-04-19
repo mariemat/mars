@@ -30,6 +30,8 @@ poster:
 description: Based on Andy Weir's second novel, this recent masterpiece depicts Doctor Ryland Grace, a teacher forced into the study of an anomaly decimating the sun and threatening the survival of humans on earth.
 ```
 
+### Classic Mars Cinema
+
 ```movie
 title: Mission to Mars
 year: 2000
@@ -40,9 +42,6 @@ imdb: https://www.imdb.com/title/tt0183523/
 poster: https://m.media-amazon.com/images/M/MV5BNGI4Y2ZiZTUtYjQzNy00YzJmLWE5NjYtYjdmNWE4ZTlkNDA0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg
 description: Despite mixed reviews, this film tackled serious Mars exploration themes including the psychological challenges of long-duration spaceflight and the search for Martian life.
 ```
-
-### Classic Mars Cinema
-
 
 ## Lunar Exploration Films
 
