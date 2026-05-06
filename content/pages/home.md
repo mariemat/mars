@@ -5,6 +5,17 @@
 
 This project is directed by Marion, a student in France. If you are interested in exchanging with me about certain topics, feel welcome to leave me a comment.
 
+
+
+```gallery
+* images/Mars.webp: Image of Mars, the Red Planet
+* images/MarsLandingSites.jpg: Map showing all successful Mars landing sites from Viking 1 (1976) to Perseverance (2021), highlighting the concentration of missions in the northern lowlands and equatorial regions
+* images/curiosity-marker-band-valley.jpg: This composite panoramic image, shot by NASA's Curiosity Mars rover on April 8, 2023, shows the "Marker Band Valley" colorized and at different times of day
+* images/HI-SEAS.webp: The habitat dome of the HI-SEAS missions, on the Mauna Loa volcano, in Hawaii.
+* images/Concordia.jpg: Concordia base, situated in Antartica. The station is plunged into darkness during 4 months every year.
+```
+
+
 <div style="background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
     <h3 style="color: #1a1a2e; font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 3px solid #cc2936; padding-bottom: 0.5rem;">Quick Mars Facts</h3>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
@@ -26,12 +37,3 @@ This project is directed by Marion, a student in France. If you are interested i
         </div>
     </div>
 </div>
-
-
-```gallery
-* images/Mars.webp: Image of Mars, the Red Planet
-* images/MarsLandingSites.jpg: Map showing all successful Mars landing sites from Viking 1 (1976) to Perseverance (2021), highlighting the concentration of missions in the northern lowlands and equatorial regions
-* images/curiosity-marker-band-valley.jpg: This composite panoramic image, shot by NASA's Curiosity Mars rover on April 8, 2023, shows the "Marker Band Valley" colorized and at different times of day
-* images/HI-SEAS.webp: The habitat dome of the HI-SEAS missions, on the Mauna Loa volcano, in Hawaii.
-* images/Concordia.jpg: Concordia base, situated in Antartica. The station is plunged into darkness during 4 months every year.
-```
