@@ -13,6 +13,7 @@ This project is directed by me, Marion, a highschool student in France, as part 
 * images/curiosity-marker-band-valley.jpg: This composite panoramic image, shot by NASA's Curiosity Mars rover on April 8, 2023, shows the "Marker Band Valley" colorized and at different times of day
 * images/HI-SEAS.webp: The habitat dome of the HI-SEAS missions, on the Mauna Loa volcano, in Hawaii.
 * images/Concordia.jpg: Concordia base, situated in Antartica. The station is plunged into darkness during 4 months every year.
+* images/mars_carousel2_card2_d.jpg: Simulation of a futuristic base on Mars proposed by Space X on its website.
 ```
 
 
