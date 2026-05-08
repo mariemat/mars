@@ -7,6 +7,7 @@
     <title>Red Planet Diary</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme-minimal.css">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
@@ -19,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
 </head>
 
-<body>
+<body class="theme-minimal">
     <!-- Mobile Menu Toggle Button -->
     <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
         <span></span>
@@ -32,8 +33,7 @@
 
     <!-- Mars Hero Banner -->
     <header class="mars-banner" style="background-image:
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        url('images/mars-rover-banner.jpg');">
+        url('images/the_martian.jpg');">
         <div class="banner-content">
             <h1 class="site-title">Red Planet Diary</h1>
             <p class="site-tagline">A student guide through Mars exploration and its challenges.</p>
@@ -47,15 +47,15 @@
                 <h3>Explore</h3>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active" onclick="loadHome(event)">🏠 Home</a></li>
-                <li><a href="#mars-missions" class="nav-link" onclick="loadPage(event, 'mars-missions')">🚀 Mars Missions</a></li>  
-                <li><a href="#food-production" class="nav-link" onclick="loadPage(event, 'food-production')">🌱 Food Production</a></li>
-                <li><a href="#psychology" class="nav-link" onclick="loadPage(event, 'psychology')">🧠 Psychology</a></li>
-                <li><a href="#mars-rovers" class="nav-link" onclick="loadPage(event, 'mars-rovers')">🤖 Mars Rovers</a></li>
-                <li><a href="#space-colonies" class="nav-link" onclick="loadPage(event, 'space-colonies')">🏗️ Space Colonies</a></li>
-                <li><a href="#communication" class="nav-link" onclick="loadPage(event, 'communication')">📡 Communication</a></li>
-                <li><a href="#bibliography" class="nav-link" onclick="loadPage(event, 'bibliography')">📚 Bibliography</a></li>
-                <li><a href="#movies" class="nav-link" onclick="loadPage(event, 'movies')">🎬 Movies</a></li>
+                <li><a href="#home" class="nav-link active" onclick="loadHome(event)"><span class="nav-emoji">🏠</span> Home</a></li>
+                <li><a href="#mars-missions" class="nav-link" onclick="loadPage(event, 'mars-missions')"><span class="nav-emoji">🚀</span> Mars Missions</a></li>
+                <li><a href="#food-production" class="nav-link" onclick="loadPage(event, 'food-production')"><span class="nav-emoji">🌱</span> Food Production</a></li>
+                <li><a href="#psychology" class="nav-link" onclick="loadPage(event, 'psychology')"><span class="nav-emoji">🧠</span> Psychology</a></li>
+                <li><a href="#mars-rovers" class="nav-link" onclick="loadPage(event, 'mars-rovers')"><span class="nav-emoji">🤖</span> Mars Rovers</a></li>
+                <li><a href="#space-colonies" class="nav-link" onclick="loadPage(event, 'space-colonies')"><span class="nav-emoji">🏗️</span> Space Colonies</a></li>
+                <li><a href="#communication" class="nav-link" onclick="loadPage(event, 'communication')"><span class="nav-emoji">📡</span> Communication</a></li>
+                <li><a href="#bibliography" class="nav-link" onclick="loadPage(event, 'bibliography')"><span class="nav-emoji">📚</span> Bibliography</a></li>
+                <li><a href="#movies" class="nav-link" onclick="loadPage(event, 'movies')"><span class="nav-emoji">🎬</span> Movies</a></li>
             </ul>
 
             <!-- Footer Links -->
@@ -65,11 +65,6 @@
                     <li><a href="https://mars.nasa.gov/" target="_blank" rel="noopener">NASA Mars Exploration</a></li>
                     <li><a href="https://www.spacex.com/mars/" target="_blank" rel="noopener">SpaceX Mars Program</a></li>
                     <li><a href="https://www.marssociety.org/" target="_blank" rel="noopener">Mars Society</a></li>
-                </ul>
-
-                <h4>Follow</h4>
-                <ul class="footer-links">
-                    <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
                 </ul>
             </div>
         </nav>

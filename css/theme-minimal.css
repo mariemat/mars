@@ -1,0 +1,401 @@
+/* Minimal dark theme — applies when <body class="theme-minimal"> */
+
+body.theme-minimal {
+    background: #1a1410;
+}
+
+/* Banner: keep original image, just refine the chrome around it */
+body.theme-minimal .mars-banner {
+    box-shadow: none;
+    border-bottom: 1px solid #2a2420;
+    /* background-image, size, position, repeat all come from main.css / inline style */
+}
+
+/* Subtle dark overlay for legibility — does not touch the image itself */
+body.theme-minimal .mars-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(26, 20, 16, 0.25) 0%,
+        rgba(26, 20, 16, 0.55) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+body.theme-minimal .banner-content {
+    color: #f5f1ed;
+    padding: 1.5rem 2rem;
+}
+
+body.theme-minimal .site-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #f5f1ed;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.4rem;
+}
+
+/* Orange accent square — same as the sidebar logo tile */
+body.theme-minimal .site-title::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #d4451a 0%, #b53a14 100%);
+    border-radius: 3px;
+    margin-right: 0.7rem;
+    transform: translateY(-4px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.theme-minimal .site-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #f5f1ed;
+    opacity: 1;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0;
+}
+
+/* Page layout uses the same dark canvas */
+body.theme-minimal .page-layout {
+    background: #1a1410;
+}
+
+/* Sidebar: pure dark, no gradient, thin separator on the right */
+body.theme-minimal .sidebar {
+    background: #1a1410;
+    color: #d4d0cc;
+    padding: 1.5rem 0;
+    box-shadow: none;
+    border-right: 1px solid #2a2420;
+}
+
+/* Header: small logo tile + bold title, no underline accent */
+body.theme-minimal .sidebar-header {
+    padding: 0 1.5rem 2rem;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+body.theme-minimal .sidebar-header::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #d4451a 0%, #b53a14 100%);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+body.theme-minimal .sidebar-header h3 {
+    color: #f5f1ed;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+/* Nav links: slim, rounded pill on hover/active, muted icons */
+body.theme-minimal .nav-menu {
+    padding: 0 0.75rem;
+}
+
+body.theme-minimal .nav-link {
+    padding: 0.7rem 0.85rem;
+    margin: 0.15rem 0;
+    color: #c4bfb9;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-left: none;
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* Recolor emoji icons to match the muted theme palette */
+body.theme-minimal .nav-emoji {
+    display: inline-block;
+    margin-right: 0.6rem;
+    filter: grayscale(1) brightness(0.85) sepia(1) hue-rotate(-20deg) saturate(0.6);
+    transition: filter 0.15s ease;
+}
+
+body.theme-minimal .nav-link:hover .nav-emoji,
+body.theme-minimal .nav-link.active .nav-emoji {
+    filter: grayscale(1) brightness(1.1) sepia(1) hue-rotate(-25deg) saturate(2.5);
+}
+
+body.theme-minimal .nav-link:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: #f5f1ed;
+    border-left: none;
+    transform: none;
+}
+
+body.theme-minimal .nav-link.active {
+    background: rgba(212, 69, 26, 0.18);
+    color: #ff7a47;
+    border-left: none;
+}
+
+/* Footer section: lower-cased label, plain text links */
+body.theme-minimal .sidebar-footer {
+    margin-top: auto;
+    padding: 2rem 1.5rem 1rem;
+    border-top: 1px solid #2a2420;
+}
+
+body.theme-minimal .sidebar-footer h4 {
+    color: #6b6560;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+}
+
+body.theme-minimal .footer-links a {
+    color: #d4d0cc;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+body.theme-minimal .footer-links a:hover {
+    color: #ff7a47;
+}
+
+body.theme-minimal .footer-links li {
+    margin-bottom: 0.85rem;
+}
+
+/* Make the sidebar fill the full height so the footer sits at the bottom */
+body.theme-minimal .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 350px); /* matches banner height */
+}
+
+body.theme-minimal .nav-menu {
+    flex: 0 0 auto;
+}
+
+/* ---------- Main content area: warm off-white surface ---------- */
+
+body.theme-minimal .content {
+    background: #faf6f1;
+    color: #2a2420;
+    border-top-left-radius: 32px;
+    margin-top: -32px;
+    position: relative;
+    z-index: 1;
+}
+
+body.theme-minimal #page-content h1 {
+    color: #1a1410;
+    border-bottom-color: #d4451a;
+}
+
+body.theme-minimal #page-content h2,
+body.theme-minimal #page-content h3,
+body.theme-minimal #page-content h4 {
+    color: #1a1410;
+}
+
+body.theme-minimal #page-content p,
+body.theme-minimal #page-content li {
+    color: #2a2420;
+}
+
+body.theme-minimal #page-content a {
+    color: #b53a14;
+}
+
+body.theme-minimal #page-content a:hover {
+    color: #ff7a47;
+}
+
+/* Inline code */
+body.theme-minimal #page-content code {
+    background: #f0e9e0;
+    color: #b53a14;
+}
+
+/* Code blocks */
+body.theme-minimal #page-content pre {
+    background: #f0e9e0;
+    border-color: #e3d8c9;
+}
+
+/* Blockquote */
+body.theme-minimal #page-content blockquote {
+    background: #f0e9e0;
+    border-left-color: #d4451a;
+    color: #2a2420;
+}
+
+/* Tables */
+body.theme-minimal #page-content th {
+    background: #1a1410;
+    color: #f5f1ed;
+}
+
+body.theme-minimal #page-content td {
+    border-bottom-color: #e3d8c9;
+}
+
+body.theme-minimal #page-content tr:hover {
+    background: #f0e9e0;
+}
+
+/* Horizontal rule */
+body.theme-minimal #page-content hr {
+    border-top-color: #e3d8c9;
+}
+
+/* ---------- Cards (stats, movie, book, rover, gallery) ----------
+   Surface = warm tan, slightly darker than the page (#faf6f1).
+   Accent  = orange (#d4451a) — same family as the sidebar logo / active link.
+*/
+
+body.theme-minimal #page-content .card {
+    background: #efe5d6;
+    border: 1px solid #e3d8c9;
+    color: #2a2420;
+}
+
+/* Stats card: top accent bar + section title */
+body.theme-minimal #page-content .card-stats {
+    border-top: 4px solid #d4451a;
+    box-shadow: none;
+}
+
+body.theme-minimal #page-content .card-stats .card-title {
+    color: #1a1410;
+    border-bottom: 2px solid #d4451a;
+}
+
+/* Stat tiles inside a stats card — even darker so they pop */
+body.theme-minimal #page-content .stat-tile {
+    background: #e3d4bc;
+    border: 1px solid #d4c3a6;
+}
+
+body.theme-minimal #page-content .stat-tile-value {
+    color: #b53a14;
+}
+
+body.theme-minimal #page-content .stat-tile-label {
+    color: #6b5f53;
+}
+
+/* Media cards (movie / book / rover): left accent stripe in orange */
+body.theme-minimal #page-content .card-media {
+    border-left: 4px solid #d4451a;
+}
+
+body.theme-minimal #page-content .card-heading {
+    color: #b53a14;
+}
+
+/* Gallery: same warm tan surface, top accent bar */
+body.theme-minimal #page-content .mars-gallery {
+    background: #efe5d6;
+    border: 1px solid #e3d8c9;
+    border-top: 4px solid #d4451a;
+    box-shadow: none;
+}
+
+body.theme-minimal #page-content .gallery-image-wrapper {
+    background: #efe5d6;
+}
+
+body.theme-minimal #page-content .gallery-description {
+    background: transparent;
+    color: #2a2420;
+    border-left: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Gallery navigation buttons: orange gradient instead of red */
+body.theme-minimal #page-content .gallery-prev,
+body.theme-minimal #page-content .gallery-next {
+    background: linear-gradient(135deg, rgba(212, 69, 26, 0.9), rgba(255, 122, 71, 0.9));
+    box-shadow: 0 2px 8px rgba(212, 69, 26, 0.4);
+}
+
+body.theme-minimal #page-content .gallery-prev:hover:not(:disabled),
+body.theme-minimal #page-content .gallery-next:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(212, 69, 26, 1), rgba(255, 122, 71, 1));
+}
+
+/* ---------- Site footer ---------- */
+body.theme-minimal .site-footer {
+    background: #1a1410;
+    color: #c4bfb9;
+    border-top: 1px solid #2a2420;
+}
+
+body.theme-minimal .site-footer a {
+    color: #ff7a47;
+}
+
+body.theme-minimal .site-footer a:hover {
+    color: #f5f1ed;
+}
+
+/* ---------- Opt-in white border for inline images ---------- */
+body.theme-minimal #page-content img.img-border {
+    border: 12px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(26, 20, 16, 0.18);
+    background: #ffffff;
+}
+
+/* ---------- Polaroid frame ---------- */
+body.theme-minimal #page-content img.img-polaroid {
+    border: 14px solid #ffffff;
+    border-bottom-width: 60px;
+    border-radius: 2px;
+    box-shadow: 0 6px 22px rgba(26, 20, 16, 0.28);
+    background: #ffffff;
+    transform: rotate(-1.5deg);
+    transform-origin: center;
+}
+body.theme-minimal #page-content .welcome-message {
+    margin: 1rem 0 3rem;
+}
+
+body.theme-minimal #page-content .welcome-message h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: #1a1410;
+    letter-spacing: -0.02em;
+}
+
+body.theme-minimal #page-content .welcome-message p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.65;
+    color: #2a2420;
+    margin-bottom: 1rem;
+}
+
+body.theme-minimal #page-content .welcome-message p:last-child {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6b5f53;
+    font-style: italic;
+}

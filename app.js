@@ -20,24 +20,23 @@ function parseKeyValues(content) {
 // Render stats block
 function renderStatsBlock(content) {
     const data = parseKeyValues(content);
-    let html = '<div style="background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">';
+    let html = '<div class="card card-stats" style="border-radius: 12px; padding: 2rem; margin: 2rem 0;">';
 
     if (data.title) {
-        html += `<h3 style="color: #1a1a2e; font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 3px solid #cc2936; padding-bottom: 0.5rem;">${data.title}</h3>`;
+        html += `<h3 class="card-title" style="font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem;">${data.title}</h3>`;
     }
 
     html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">';
 
-    // Find all stat items (stat1_value, stat2_value, etc.)
     let i = 1;
     while (data[`stat${i}_value`]) {
         const value = data[`stat${i}_value`];
         const label = data[`stat${i}_label`] || '';
 
         html += `
-            <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
-                <div style="font-size: 2rem; font-weight: 700; color: #cc2936; margin-bottom: 0.5rem;">${value}</div>
-                <div style="font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px;">${label}</div>
+            <div class="stat-tile" style="text-align: center; padding: 1.5rem; border-radius: 8px;">
+                <div class="stat-tile-value" style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">${value}</div>
+                <div class="stat-tile-label" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">${label}</div>
             </div>
         `;
         i++;
@@ -52,7 +51,7 @@ function renderMovieBlock(content) {
     const data = parseKeyValues(content);
     const poster = data.poster || '';
 
-    let html = '<div style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #cc2936;">';
+    let html = '<div class="card card-media" style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; border-radius: 8px;">';
 
     if (poster) {
         html += `<img src="${poster}" alt="${data.title} Poster" style="width: 120px; height: 180px; margin-right: 1rem; border-radius: 4px; object-fit: cover;" onerror="this.style.background='#ddd'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🎬<br>Poster'; this.style.color='#666'; this.style.fontSize='12px'; this.style.textAlign='center';">`;
@@ -61,7 +60,7 @@ function renderMovieBlock(content) {
     html += '<div>';
 
     if (data.title) {
-        html += `<h4 style="margin: 0 0 0.5rem 0; color: #cc2936;">${data.title}${data.year ? ` (${data.year})` : ''}</h4>`;
+        html += `<h4 class="card-heading" style="margin: 0 0 0.5rem 0;">${data.title}${data.year ? ` (${data.year})` : ''}</h4>`;
     }
 
     html += '<p>';
@@ -87,7 +86,7 @@ function renderBookBlock(content) {
     // Generate Amazon link from ASIN if not explicitly provided
     const amazonLink = data.amazon || (data.asin ? `https://www.amazon.com/dp/${data.asin}` : '');
 
-    let html = '<div style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #cc2936;">';
+    let html = '<div class="card card-media" style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; border-radius: 8px;">';
 
     if (cover) {
         html += `<img src="${cover}" alt="${data.title} Cover" style="width: 120px; height: 180px; margin-right: 1rem; border-radius: 4px; object-fit: cover;" onerror="this.style.background='#ddd'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='📚<br>Cover'; this.style.color='#666'; this.style.fontSize='12px'; this.style.textAlign='center';">`;
@@ -96,7 +95,7 @@ function renderBookBlock(content) {
     html += '<div>';
 
     if (data.title) {
-        html += `<h4 style="margin: 0 0 0.5rem 0; color: #cc2936;">${data.title}</h4>`;
+        html += `<h4 class="card-heading" style="margin: 0 0 0.5rem 0;">${data.title}</h4>`;
     }
 
     html += '<p>';
@@ -119,59 +118,22 @@ function renderRoverBlock(content) {
     const data = parseKeyValues(content);
     const image = data.image || '';
 
-    // Determine base icon from type (for image fallback only)
-    const type = (data.type || 'rover').toLowerCase();
-    let icon = data.icon;
-    if (!icon) {
-        if (type === 'helicopter' || type === 'aircraft') {
-            icon = '🚁';
-        } else if (type === 'mission' || type === 'campaign') {
-            icon = '🚀';
-        } else {
-            icon = '🤖';
-        }
-    }
+    let html = '<div class="card card-media" style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; border-radius: 8px;">';
 
-    // Determine status icon (for status display only)
-    let statusIcon = '';
-    const status = (data.status || '').toLowerCase();
-    if (status.includes('inactive')) {
-        statusIcon = '❌';
-    } else if (status.includes('hibernating')) {
-        statusIcon = '⚠️';
-    } else if (status.includes('future')) {
-        statusIcon = '⏳';
-    } else if (status.includes('active')) {
-        statusIcon = '✅';
-    }
-
-    let html = '<div style="display: flex; align-items: flex-start; margin-bottom: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #cc2936;">';
-
-    // Use image if provided, otherwise use gradient background with icon
     if (image) {
-        html += `<img src="${image}" alt="${data.name}" style="width: 120px; height: 180px; margin-right: 1rem; border-radius: 4px; object-fit: cover;" onerror="this.style.background='linear-gradient(135deg, #cc2936, #ff6b35)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='${icon}'; this.style.color='white'; this.style.fontSize='48px'; this.removeAttribute('src');">`;
-    } else {
-        html += `<div style="width: 120px; height: 180px; margin-right: 1rem; border-radius: 4px; background: linear-gradient(135deg, #cc2936, #ff6b35); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; flex-shrink: 0;">${icon}</div>`;
+        html += `<img src="${image}" alt="${data.name}" style="width: 120px; height: 180px; margin-right: 1rem; border-radius: 4px; object-fit: cover;">`;
     }
 
     html += '<div>';
 
     if (data.name) {
-        html += `<h4 style="margin: 0 0 0.5rem 0; color: #cc2936;">${data.name}</h4>`;
-    }
-
-    // Determine type icon for display (reuse type variable from above)
-    let typeIcon = '🤖';
-    if (type === 'helicopter' || type === 'aircraft') {
-        typeIcon = '🚁';
-    } else if (type === 'mission' || type === 'campaign') {
-        typeIcon = '🚀';
+        html += `<h4 class="card-heading" style="margin: 0 0 0.5rem 0;">${data.name}</h4>`;
     }
 
     html += '<p>';
-    if (data.type) html += `<strong>Type:</strong> ${typeIcon} ${data.type.charAt(0).toUpperCase() + data.type.slice(1)}<br>`;
+    if (data.type) html += `<strong>Type:</strong> ${data.type.charAt(0).toUpperCase() + data.type.slice(1)}<br>`;
     if (data.landing) html += `<strong>Landing Date:</strong> ${data.landing}<br>`;
-    if (data.status) html += `<strong>Status:</strong> ${statusIcon} ${data.status}<br>`;
+    if (data.status) html += `<strong>Status:</strong> ${data.status}<br>`;
     if (data.site) html += `<strong>Landing Site:</strong> ${data.site}<br>`;
     if (data.coordinates) html += `<strong>Coordinates:</strong> ${data.coordinates}<br>`;
     if (data.mission) html += `<strong>Mission:</strong> ${data.mission}<br>`;
@@ -293,6 +255,63 @@ document.addEventListener('DOMContentLoaded', () => {
         if (language === 'rover') return renderRoverBlock(code);
         if (language === 'gallery') return renderGalleryBlock(code);
         return originalCodeRenderer(code, language);
+    };
+
+    // Support sizing/alignment/border via alt text. Modifiers go after `|`, in any order:
+    //   ![alt|50%](src)            — 50% of the image's natural size
+    //   ![alt|300px](src)          — explicit pixel width (px optional: 300 also works)
+    //   ![alt|300x200](src)        — explicit width x height
+    //   ![alt|left](src)           — float left (text wraps)
+    //   ![alt|right](src)          — float right (text wraps)
+    //   ![alt|center](src)         — centered block
+    //   ![alt|border](src)         — white photo-style border
+    //   ![alt|polaroid](src)       — polaroid frame (slight tilt, thick bottom)
+    //   ![alt|50%|right|border](src) — combine modifiers
+    const originalImageRenderer = renderer.image.bind(renderer);
+    const ALIGN = { left: 'left', right: 'right', center: 'center' };
+    const isSize = (s) => /^\d+(?:%|px)?(?:x\d+(?:%|px)?)?$/.test(s);
+    const unit = (v) => /^\d+$/.test(v) ? `${v}px` : v;
+
+    renderer.image = function(href, title, text) {
+        if (!text || text.indexOf('|') === -1) return originalImageRenderer(href, title, text);
+
+        const parts = text.split('|');
+        const alt = parts.shift();
+        let size = null;
+        let align = null;
+        let frame = null;
+        for (const p of parts) {
+            const t = p.trim();
+            if (t === 'border' || t === 'polaroid') frame = t;
+            else if (ALIGN[t]) align = ALIGN[t];
+            else if (isSize(t)) size = t;
+            else return originalImageRenderer(href, title, text); // unknown modifier → bail
+        }
+        if (!size && !align && !frame) return originalImageRenderer(href, title, text);
+
+        const titleAttr = title ? ` title="${title}"` : '';
+        const classAttr = frame === 'border' ? ' class="img-border"'
+                       : frame === 'polaroid' ? ' class="img-polaroid"'
+                       : '';
+
+        let styles = [];
+        if (align === 'left')  styles.push('float: left', 'margin: 0.5rem 1rem 0.5rem 0');
+        if (align === 'right') styles.push('float: right', 'margin: 0.5rem 0 0.5rem 1rem');
+        if (align === 'center') styles.push('display: block', 'margin: 1rem auto');
+
+        let onload = '';
+        const pct = size && size.match(/^(\d+)%$/);
+        if (pct) {
+            const scale = parseInt(pct[1], 10) / 100;
+            onload = ` onload="this.style.width=(this.naturalWidth*${scale})+'px'"`;
+        } else if (size) {
+            const [w, h] = size.split('x');
+            styles.push(`width: ${unit(w)}`);
+            if (h) styles.push(`height: ${unit(h)}`);
+        }
+
+        const styleAttr = styles.length ? ` style="${styles.join('; ')}"` : '';
+        return `<img src="${href}" alt="${alt}"${classAttr}${titleAttr}${styleAttr}${onload}>`;
     };
 
     marked.setOptions({
