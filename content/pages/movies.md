@@ -1,7 +1,7 @@
 
 # Cinema's Journey to the Stars: Essential Space Exploration Films
 
-Space conquest is one of the main subject of science fiction cinema. From complete fictions to documentaries, you can find here a list of my best found on the matter and recommendations.
+Space conquest is one of the main subject of science fiction cinema. From complete fictions to documentaries, you can find here a list of my best finds on the matter and recommendations.
 
 ## Mars on the Big Screen
 
