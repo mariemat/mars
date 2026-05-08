@@ -13,7 +13,6 @@ type: rover
 landing: February 18, 2021
 status: Active
 site: Jezero Crater
-coordinates: 18.4447°N, 77.4508°E
 mission: NASA Mars 2020
 duration: 1000+ sols (Martian days) and counting
 image: images/MarsPerseveranceRover-ArtistConcept.jpg
@@ -28,7 +27,6 @@ type: rover
 landing: August 5, 2012
 status: Active
 site: Gale Crater
-coordinates: 4.5895°S, 137.4417°E
 mission: NASA Mars Science Laboratory (MSL)
 duration: 4000+ sols and counting
 image: images/Curiosity_Self-Portrait_at_Big_Sky_Drilling_Site.jpg
@@ -43,7 +41,6 @@ type: rover
 landing: May 14, 2021
 status: Hibernating (Expected to reactivate)
 site: Utopia Planitia
-coordinates: 25.066°N, 109.925°E
 mission: CNSA Tianwen-1
 duration: 350+ sols (planned 90 sols)
 image: images/Zhurong_rover.png
@@ -62,7 +59,6 @@ type: rover
 landing: January 25, 2004
 status: Inactive (Last contact: June 10, 2018)
 site: Meridiani Planum
-coordinates: 1.9462°S, 354.4734°E
 mission: NASA Mars Exploration Rover B
 duration: 5,352 sols (planned 90 sols)
 image: images/Opportunity.jpg
@@ -77,7 +73,6 @@ type: rover
 landing: January 4, 2004
 status: Inactive (Last contact: March 22, 2010)
 site: Gusev Crater
-coordinates: 14.5684°S, 175.4726°E
 mission: NASA Mars Exploration Rover A
 duration: 2,208 sols (planned 90 sols)
 image: images/Mars_Spirit.jpeg
@@ -92,7 +87,6 @@ type: rover
 landing: July 4, 1997
 status: Inactive (Last contact: September 27, 1997)
 site: Ares Vallis
-coordinates: 22.482°N, 33.22°W
 mission: NASA Mars Pathfinder
 duration: 85 sols (planned 7-30 sols)
 image: images/Sojourner.jpg
