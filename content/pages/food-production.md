@@ -10,3 +10,7 @@ When interviewing Lucie POULET, she explained to me the study of exchanges going
 ## Plant Types for Space
 
 In the movie The Martian, you might remember Mark Watney growing potatoes from a bag of Thanksgiving dinner. Well potatoes are actually not the easiest vegetable to grow. During my exchange with Gioia MASSA, I discovered the "Pick and Eat" vegetables. Tomatoes or salad for example are easier to harvest by being above-ground vegetable. It is easy to control their growth and check whenever thay are fully developped and ready to be eaten. [You can find here the transcript of an interview of Gioia MASSA on this topic](https://www.nasa.gov/podcasts/houston-we-have-a-podcast/mars-audio-log-4/)
+
+## Fun Fact: the Zinnia
+
+On Jan. 16, 2016, Expedition 46 Commander Scott Kelly shared photographs of a blooming zinnia flower in the Veggie plant growth system aboard the International Space Station. Kelly wrote, “Yes, there are other life forms in space! #SpaceFlower #YearInSpace”. [See more here](https://www.nasa.gov/image-article/first-flower-grown-space-stations-veggie-facility-2/)
