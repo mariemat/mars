@@ -3,7 +3,7 @@
 
 3...2...1...and liftoff ! Welcome to my space of discoveries ! Lets learn together how astronauts and scientists from around the world prepare to space missions and exploration. I assembled for you several sources on the topic, movies and books recommendations as well as articles that summarize my most interesting discoveries. Have fun looking around !
 
-This project is directed by me, Marion, a highschool student in France. 
+This project is directed by me, Marion, a highschool student in France, as part of my final exam.
 
 
 
