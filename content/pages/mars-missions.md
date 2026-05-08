@@ -11,11 +11,14 @@ The effect of confinement and forced proximity of the crew is closely studied by
 
 ### Concordia
 “On arrival at Concordia, a period of adjustment is required, similar to astronauts in space. The high altitude, extreme cold, dry air and new sensations can overwhelm the human brain as it adjusts to the new environment.” -ESA
-As said on the concordia presentation by ESA website, the isolated region on Earth such as the poles (here antarctica) offer conditions similar to Mars. Indeed scientists are subject to harsh conditions and need a period of adjustment that has to be studied in order to be in control when landing on a new planet. 
+As said on the presentation of Concordia by ESA website, the isolated region on Earth such as the poles (here Antarctica) offer conditions similar to Mars. Indeed scientists are subject to harsh conditions and need a period of adjustment that has to be studied in order to be in control when landing on a new planet. 
 Once again, In Cyprien Verseux book, Un Hiver en Antarctique, his position as mission captain brings a completely different point of view on the team dynamics. Indeed, there is much more pressure on the team captain since its job does not ever stop, he is therefore never seen as a simple teammate but always as a superior and model of authority. 
 
 ## Future or current Mars Missions
 
-## NASA's plan
+### NASA's plan
+Nasa recently announced a change of board in its lunar exploration. The Gateway project (a station like the ISS orbiting around the moon) has been canceled and replaced by a permanent lunar based project. This based is announced to be finalized "before the end of President Trump’s term. The announcement was made on March 24 by Jared Isaacman, recently promoted Nasa Administrator by President Trump. This change of plan at Nasa is a new turning point in space exploration. 
+Going to Mars has never been closer for Nasa. Indeed, the Artemis missions are the first step to start building this lunar base, which will later on, be the starting point of Mars mission, serving as lauchpad to avoid Earth's gravity.
 
-## Space X's plan
+### Space X's plan
+On Space X's [website](https://www.spacex.com/humanspaceflight/mars) you can find the sentence "Making humanity multiplanetary". Its goal to colonize new planets to expand humanity is clear. But what is the plan to enable an entire population to live on a planet that does not have the right atmosphere, too much radiation; not the best conditions to survive. 
