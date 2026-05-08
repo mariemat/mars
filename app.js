@@ -1,34 +1,4 @@
-// Custom renderer for special code blocks
-const renderer = new marked.Renderer();
-const originalCodeRenderer = renderer.code.bind(renderer);
-
-renderer.code = function(code, language) {
-    // Handle custom block types
-    if (language === 'stats') {
-        return renderStatsBlock(code);
-    } else if (language === 'movie') {
-        return renderMovieBlock(code);
-    } else if (language === 'book') {
-        return renderBookBlock(code);
-    } else if (language === 'rover') {
-        return renderRoverBlock(code);
-    } else if (language === 'gallery') {
-        return renderGalleryBlock(code);
-    }
-
-    // Fall back to default code rendering
-    return originalCodeRenderer(code, language);
-};
-
-// Configure marked to allow HTML in markdown
-marked.setOptions({
-    breaks: true,
-    gfm: true,
-    headerIds: true,
-    mangle: false,
-    sanitize: false, // Allow HTML in markdown (safe for our controlled content)
-    renderer: renderer
-});
+const galleryTimers = new Map();
 
 // Parse key-value pairs from code block content
 function parseKeyValues(content) {
@@ -312,17 +282,34 @@ function renderGalleryBlock(content) {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize marked renderer here so marked.js CDN is guaranteed loaded
+    const renderer = new marked.Renderer();
+    const originalCodeRenderer = renderer.code.bind(renderer);
+
+    renderer.code = function(code, language) {
+        if (language === 'stats') return renderStatsBlock(code);
+        if (language === 'movie') return renderMovieBlock(code);
+        if (language === 'book') return renderBookBlock(code);
+        if (language === 'rover') return renderRoverBlock(code);
+        if (language === 'gallery') return renderGalleryBlock(code);
+        return originalCodeRenderer(code, language);
+    };
+
+    marked.setOptions({
+        breaks: true,
+        gfm: true,
+        headerIds: true,
+        mangle: false,
+        sanitize: false,
+        renderer: renderer
+    });
+
     updateFooterTime();
     setupMobileMenu();
 
-    // Handle initial page load from URL hash
-    const hash = window.location.hash.slice(1); // Remove '#'
-    if (hash && hash !== 'home') {
-        loadPageBySlug(hash);
-    } else {
-        // Load home page by default
-        loadHome();
-    }
+    // Handle initial page load from URL hash, default to first nav item (home)
+    const hash = window.location.hash.slice(1);
+    loadPageBySlug(hash && hash !== 'home' ? hash : 'home');
 });
 
 // Mobile menu functionality
@@ -404,19 +391,12 @@ function setupMobileMenu() {
     });
 }
 
-// Update footer with current time
+// Update footer with current year
 function updateFooterTime() {
-    const now = new Date();
-    const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    };
-    document.getElementById('generation-time').textContent = now.toLocaleString('en-US', options);
-    document.getElementById('current-year').textContent = now.getFullYear();
+    const currentYear = document.getElementById('current-year');
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
 }
 
 // Parse YAML-like frontmatter
@@ -604,8 +584,6 @@ function initializeLightbox() {
 }
 
 // Gallery navigation functions
-// Store auto-advance timers for each gallery
-const galleryTimers = new Map();
 
 function initializeGalleries() {
     const galleries = document.querySelectorAll('.mars-gallery');

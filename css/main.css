@@ -385,12 +385,6 @@ body {
     margin: 2rem 0;
 }
 
-/* Footer timestamp */
-.generation-time {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-top: 0.5rem;
-}
 
 /* Homepage specific styles */
 .hero-section {
