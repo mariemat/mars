@@ -96,21 +96,46 @@ body.theme-minimal .site-tagline {
     }
 }
 
-/* Keep banner title and tagline on a single line each on mobile */
+/* Mobile banner: shrink title/tagline so each fits on a single line.
+   Desktop sizes (set in the base rules above) are unchanged. */
 @media (max-width: 768px) {
     body.theme-minimal .site-title {
-        font-size: clamp(1.4rem, 6.5vw, 2.75rem);
+        font-size: 2rem;
         white-space: nowrap;
     }
-
     body.theme-minimal .site-tagline {
-        font-size: clamp(0.7rem, 2.5vw, 1rem);
+        font-size: 0.85rem;
         white-space: nowrap;
     }
-
     body.theme-minimal .banner-content {
         padding: 1rem;
-        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body.theme-minimal .site-title {
+        font-size: 1.5rem;
+    }
+    body.theme-minimal .site-title::before {
+        width: 10px;
+        height: 10px;
+        margin-right: 0.5rem;
+        transform: translateY(-3px);
+    }
+    body.theme-minimal .site-tagline {
+        font-size: 0.7rem;
+    }
+    body.theme-minimal .banner-content {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 380px) {
+    body.theme-minimal .site-title {
+        font-size: 1.25rem;
+    }
+    body.theme-minimal .site-tagline {
+        font-size: 0.65rem;
     }
 }
 
