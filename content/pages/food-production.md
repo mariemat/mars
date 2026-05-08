@@ -14,3 +14,5 @@ In the movie The Martian, you might remember Mark Watney growing potatoes from a
 ## Fun Fact: the Zinnia
 
 On Jan. 16, 2016, Expedition 46 Commander Scott Kelly shared photographs of a blooming zinnia flower in the Veggie plant growth system aboard the International Space Station. Kelly wrote, “Yes, there are other life forms in space! #SpaceFlower #YearInSpace”. [See more here](https://www.nasa.gov/image-article/first-flower-grown-space-stations-veggie-facility-2/)
+
+[zinnia](images/zinnia.jpg)
