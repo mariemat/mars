@@ -63,6 +63,39 @@ body.theme-minimal .site-tagline {
     letter-spacing: 0;
 }
 
+/* On mobile, force inline content images to fit the viewport.
+   Overrides any explicit width set via |50%, |300px, etc. */
+@media (max-width: 768px) {
+    body.theme-minimal #page-content img {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        float: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    /* Polaroid: kill the tilt + heavy frame on small screens so it fits */
+    body.theme-minimal #page-content img.img-polaroid {
+        transform: none;
+        border-width: 8px;
+        border-bottom-width: 32px;
+    }
+
+    /* Border variant: thinner on mobile */
+    body.theme-minimal #page-content img.img-border {
+        border-width: 6px;
+    }
+
+    /* Card images keep their fixed dimensions (covers, posters) */
+    body.theme-minimal #page-content .card img {
+        width: 90px !important;
+        height: 135px !important;
+    }
+}
+
 /* Keep banner title and tagline on a single line each on mobile */
 @media (max-width: 768px) {
     body.theme-minimal .site-title {
