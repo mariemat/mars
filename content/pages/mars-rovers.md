@@ -118,55 +118,6 @@ link: https://mars.nasa.gov/technology/helicopter/
 link_text: Ingenuity Helicopter
 description: The first aircraft to achieve powered flight on another planet. Originally a technology demonstration, Ingenuity has far exceeded expectations and now serves as a scout for Perseverance.
 ```
-
-## Mission Statistics
-
-### By the Numbers
-
-```stats
-title: Mars Rover Statistics
-stat1_value: 6
-stat1_label: Successfully landed on Mars
-stat2_value: 2-3
-stat2_label: Currently Active
-stat3_value: 73+ km
-stat3_label: Traveled across Mars
-stat4_value: 26+ years
-stat4_label: Of Martian exploration
-```
-
-## Future Rovers
-
-### Upcoming Missions
-
-```rover
-name: Rosalind Franklin (ExoMars)
-type: rover
-landing: TBD (Delayed)
-status: Future Mission
-site: Oxia Planum
-mission: ESA ExoMars Programme
-duration: Planned 7+ months
-image: images/ExoMars.jpg
-link: https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars
-link_text: ExoMars Programme
-description: European Space Agency rover designed to drill up to 2 meters below the Martian surface to search for biosignatures and signs of past or present life. Named after DNA pioneer Rosalind Franklin.
-```
-
-```rover
-name: Mars Sample Return Campaign
-type: mission
-landing: 2030s (Planned)
-status: Future Mission
-site: Jezero Crater vicinity
-mission: Joint NASA/ESA
-duration: Multi-phase campaign
-image: images/Mars_Samples_retrieval_lander.jpg
-link: https://mars.nasa.gov/msr/
-link_text: Mars Sample Return
-description: Ambitious joint NASA/ESA mission to retrieve samples collected by Perseverance rover, involving multiple spacecraft, rovers, and aircraft working together for the first Mars sample return to Earth.
-```
-
 ---
 
 *All coordinates are in Mars areocentric coordinates. Landing dates are in Earth time (UTC). Sol = Martian solar day (approximately 24 hours 37 minutes).*
