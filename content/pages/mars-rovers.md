@@ -114,6 +114,3 @@ description: The first aircraft to achieve powered flight on another planet. Ori
 ```
 ---
 
-*All coordinates are in Mars areocentric coordinates. Landing dates are in Earth time (UTC). Sol = Martian solar day (approximately 24 hours 37 minutes).*
-
-**Data Sources:** NASA JPL, ESA, CNSA mission archives and real-time telemetry data.
