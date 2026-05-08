@@ -1,5 +1,5 @@
 
-# Space Psychology: The Human Mind Beyond Earth
+# Space Psychology
 
 When living for a long period of time in a small environnement with few other people, it isn't always easy to stay calm and to keep a positive attitude. 
 
