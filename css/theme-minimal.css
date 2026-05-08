@@ -63,6 +63,24 @@ body.theme-minimal .site-tagline {
     letter-spacing: 0;
 }
 
+/* Keep banner title and tagline on a single line each on mobile */
+@media (max-width: 768px) {
+    body.theme-minimal .site-title {
+        font-size: clamp(1.4rem, 6.5vw, 2.75rem);
+        white-space: nowrap;
+    }
+
+    body.theme-minimal .site-tagline {
+        font-size: clamp(0.7rem, 2.5vw, 1rem);
+        white-space: nowrap;
+    }
+
+    body.theme-minimal .banner-content {
+        padding: 1rem;
+        max-width: 100%;
+    }
+}
+
 /* Page layout uses the same dark canvas */
 body.theme-minimal .page-layout {
     background: #1a1410;
@@ -268,7 +286,7 @@ body.theme-minimal #page-content hr {
 */
 
 body.theme-minimal #page-content .card {
-    background: #efe5d6;
+    background: #efe5d6 !important;
     border: 1px solid #e3d8c9;
     color: #2a2420;
 }
@@ -286,7 +304,7 @@ body.theme-minimal #page-content .card-stats .card-title {
 
 /* Stat tiles inside a stats card — even darker so they pop */
 body.theme-minimal #page-content .stat-tile {
-    background: #e3d4bc;
+    background: #e3d4bc !important;
     border: 1px solid #d4c3a6;
 }
 
